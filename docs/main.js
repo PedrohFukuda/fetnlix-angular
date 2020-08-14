@@ -53,12 +53,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'conta', component: _conta_conta_component__WEBPACK_IMPORTED_MODULE_2__["ContaComponent"] },
     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"] },
     { path: 'conta/perfil/:idPerfil', component: _detalhes_perfil_detalhes_perfil_component__WEBPACK_IMPORTED_MODULE_3__["DetalhesPerfilComponent"] },
     { path: 'allcontas', component: _lista_contas_lista_contas_component__WEBPACK_IMPORTED_MODULE_5__["ListaContasComponent"] },
     { path: 'busca', component: _busca_filme_busca_filme_component__WEBPACK_IMPORTED_MODULE_6__["BuscaFilmeComponent"] },
-    { path: '', redirectTo: '/login', pathMatch: 'full' }
+    { path: '**', redirectTo: '/login' }
 ];
 class AppRoutingModule {
     constructor(router) {

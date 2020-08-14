@@ -10,12 +10,13 @@ import { ListaContasComponent } from './lista-contas/lista-contas.component';
 import { BuscaFilmeComponent } from './busca-filme/busca-filme.component'
 
 const routes: Routes = [
+	{ path: '', redirectTo: '/login', pathMatch: 'full' },
 	{ path: 'conta', component: ContaComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'conta/perfil/:idPerfil', component: DetalhesPerfilComponent },
 	{ path: 'allcontas', component: ListaContasComponent },
 	{ path: 'busca', component: BuscaFilmeComponent },
-	{ path: '', redirectTo: '/login', pathMatch: 'full' }
+	{ path: '**', redirectTo: '/login' }
 ];
 
 

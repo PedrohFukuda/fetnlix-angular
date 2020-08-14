@@ -26,6 +26,12 @@ export class ContaService {
 		ContaService.contaAtiva = -1;
 	}
 
+	public deslogar(){
+		ContaService.contaAtiva = -1;
+		//alert('Deslogado');
+		this.router.navigate(['']);
+	}
+
 	public ativarConta(id: number): void {
 		ContaService.contaAtiva = id;
 	}
@@ -36,7 +42,7 @@ export class ContaService {
 			console.log(ContaService.CONTA);
 			return this.getConta(ContaService.contaAtiva);
 		}
-			alert('Faca login para continuar');
+		alert('Faca login para continuar');
 		this.router.navigate(['login']);
 	}
 	

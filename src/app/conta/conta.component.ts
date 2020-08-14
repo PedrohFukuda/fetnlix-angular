@@ -44,4 +44,8 @@ export class ContaComponent implements OnInit {
 		return this.conta.masterPerfil;
 	}
 
+	deslogar(){
+		this.contaService.deslogar();
+	}
+
 }

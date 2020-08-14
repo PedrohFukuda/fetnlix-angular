@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 //Componentes necessarios
-import { Conta } from '../base-data-types/conta';
+import { Conta } from '../../base-data-types/conta';
 //Componentes de serviço
-import { ContaService } from '../services/conta.service';
+import { ContaService } from '../../services/conta.service';
 
 
 @Component({

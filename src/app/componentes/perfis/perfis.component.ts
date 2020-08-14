@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 //Componentes necessarios
-import { Perfil } from '../base-data-types/perfil-dt/perfil';
-import { Conta } from '../base-data-types/conta';
+import { Perfil } from '../../base-data-types/perfil-dt/perfil';
+import { Conta } from '../../base-data-types/conta';
 
 
 @Component({

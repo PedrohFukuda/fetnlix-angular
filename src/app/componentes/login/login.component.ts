@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 //Componentes necessarios
-import { Conta } from '../base-data-types/conta';
+import { Conta } from '../../base-data-types/conta';
 //Componentes de serviço
-import { LoginService } from '../services/login.service';
-import { ContaService } from '../services/conta.service';
+import { LoginService } from '../../services/login.service';
+import { ContaService } from '../../services/conta.service';
 //Componentes de roteamento
 import { Router } from '@angular/router';
 

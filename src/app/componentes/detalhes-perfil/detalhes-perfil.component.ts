@@ -1,14 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 //Componentes necessarios
-import { Perfil } from '../base-data-types/perfil-dt/perfil';
-import { Filme } from '../base-data-types/filme';
+import { Perfil } from '../../base-data-types/perfil-dt/perfil';
+import { Filme } from '../../base-data-types/filme';
 //Componentes de serviço
-import { ContaService } from '../services/conta.service';
+import { ContaService } from '../../services/conta.service';
 //Componentes de rota
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { Conta } from '../base-data-types/conta';
-import { FilmesService } from '../services/filmes.service';
+import { Conta } from '../../base-data-types/conta';
+import { FilmesService } from '../../services/filmes.service';
 
 
 @Component({

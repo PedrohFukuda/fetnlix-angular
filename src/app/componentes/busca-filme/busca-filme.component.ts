@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 //Componentes necessarios
-import { Filme } from '../base-data-types/filme';
+import { Filme } from '../../base-data-types/filme';
 //Componentes de servico
-import { FilmesService } from '../services/filmes.service';
+import { FilmesService } from '../../services/filmes.service';
 import { Router } from '@angular/router';
 
 @Component({

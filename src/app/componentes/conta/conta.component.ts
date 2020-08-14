@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 //Componentes necessarios
-import { Conta } from '../base-data-types/conta';
-import { Perfil } from '../base-data-types/perfil-dt/perfil';
-import { MasterPerfil } from '../base-data-types/perfil-dt/master-perfil'
+import { Conta } from '../../base-data-types/conta';
+import { Perfil } from '../../base-data-types/perfil-dt/perfil';
+import { MasterPerfil } from '../../base-data-types/perfil-dt/master-perfil'
 //Componentes de serviço
-import { ContaService } from '../services/conta.service'
+import { ContaService } from '../../services/conta.service'
 //Componentes de rota
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';

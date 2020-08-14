@@ -382,20 +382,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function ContaComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h2");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Dados da Conta");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "app-master-perfil", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "button", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Buscar filmes");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "app-perfis", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "app-master-perfil", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "app-perfis", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "button", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ContaComponent_div_0_Template_button_click_9_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r1.deslogar(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "deslogar");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("masterPerfil", ctx_r0.currMaster);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("perfis", ctx_r0.currPerfis)("conta", ctx_r0.conta);
@@ -419,13 +427,16 @@ class ContaComponent {
     getMasterPerfil(id) {
         return this.conta.masterPerfil;
     }
+    deslogar() {
+        this.contaService.deslogar();
+    }
 }
 ContaComponent.ɵfac = function ContaComponent_Factory(t) { return new (t || ContaComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_conta_service__WEBPACK_IMPORTED_MODULE_1__["ContaService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"])); };
-ContaComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContaComponent, selectors: [["app-conta"]], inputs: { conta: "conta" }, decls: 1, vars: 1, consts: [[4, "ngIf"], [3, "masterPerfil"], [3, "perfis", "conta"]], template: function ContaComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ContaComponent_div_0_Template, 7, 3, "div", 0);
+ContaComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContaComponent, selectors: [["app-conta"]], inputs: { conta: "conta" }, decls: 1, vars: 1, consts: [[4, "ngIf"], ["routerLink", "/busca"], [3, "masterPerfil"], [3, "perfis", "conta"], [3, "click"]], template: function ContaComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ContaComponent_div_0_Template, 11, 3, "div", 0);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.conta);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _master_perfil_master_perfil_component__WEBPACK_IMPORTED_MODULE_4__["MasterPerfilComponent"], _perfis_perfis_component__WEBPACK_IMPORTED_MODULE_5__["PerfisComponent"]], styles: ["div[_ngcontent-%COMP%] {\r\n  text-align: left;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGEvY29udGEuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQjtBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhL2NvbnRhLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXYge1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbn0iXX0= */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], _master_perfil_master_perfil_component__WEBPACK_IMPORTED_MODULE_4__["MasterPerfilComponent"], _perfis_perfis_component__WEBPACK_IMPORTED_MODULE_5__["PerfisComponent"]], styles: ["div[_ngcontent-%COMP%] {\r\n  text-align: left;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGEvY29udGEuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQjtBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhL2NvbnRhLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXYge1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ContaComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1231,6 +1242,11 @@ class ContaService {
         this.router = router;
         this.currId = 2;
         ContaService.contaAtiva = -1;
+    }
+    deslogar() {
+        ContaService.contaAtiva = -1;
+        //alert('Deslogado');
+        this.router.navigate(['']);
     }
     ativarConta(id) {
         ContaService.contaAtiva = id;

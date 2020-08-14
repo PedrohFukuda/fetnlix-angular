@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Router, RouterModule, Routes } from '@angular/router';
-//Componente de autenticacao
-//import { AutenticacaoService } from './services/autenticacao.service'
 //Componentes necessarios
-import { ContaComponent } from './conta/conta.component';
-import { DetalhesPerfilComponent } from './detalhes-perfil/detalhes-perfil.component';
-import { LoginComponent } from './login/login.component';
-import { ListaContasComponent } from './lista-contas/lista-contas.component';
-import { BuscaFilmeComponent } from './busca-filme/busca-filme.component'
+import { ContaComponent } from './componentes/conta/conta.component';
+import { DetalhesPerfilComponent } from './componentes/detalhes-perfil/detalhes-perfil.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { ListaContasComponent } from './componentes/lista-contas/lista-contas.component';
+import { BuscaFilmeComponent } from './componentes/busca-filme/busca-filme.component'
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/login', pathMatch: 'full' },

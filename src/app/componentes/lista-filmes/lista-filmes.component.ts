@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 //Componentes necessarios
-import { Filme } from '../base-data-types/filme';
+import { Filme } from '../../base-data-types/filme';
 //Componentes de serviço
-import { FilmesService } from '../services/filmes.service';
+import { FilmesService } from '../../services/filmes.service';
 
 
 @Component({

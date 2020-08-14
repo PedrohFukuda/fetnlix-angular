@@ -4,16 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { ContaComponent } from './conta/conta.component';
-import { PerfisComponent } from './perfis/perfis.component';
-import { MasterPerfilComponent } from './master-perfil/master-perfil.component';
-import { FilmeComponent } from './filme/filme.component';
-import { DetalhesPerfilComponent } from './detalhes-perfil/detalhes-perfil.component';
+import { ContaComponent } from './componentes/conta/conta.component';
+import { PerfisComponent } from './componentes/perfis/perfis.component';
+import { MasterPerfilComponent } from './componentes/master-perfil/master-perfil.component';
+import { FilmeComponent } from './componentes/filme/filme.component';
+import { DetalhesPerfilComponent } from './componentes/detalhes-perfil/detalhes-perfil.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ListaFilmesComponent } from './lista-filmes/lista-filmes.component';
-import { LoginComponent } from './login/login.component';
-import { ListaContasComponent } from './lista-contas/lista-contas.component';
-import { BuscaFilmeComponent } from './busca-filme/busca-filme.component';
+import { ListaFilmesComponent } from './componentes/lista-filmes/lista-filmes.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { ListaContasComponent } from './componentes/lista-contas/lista-contas.component';
+import { BuscaFilmeComponent } from './componentes/busca-filme/busca-filme.component';
 
 @NgModule({
   declarations: [

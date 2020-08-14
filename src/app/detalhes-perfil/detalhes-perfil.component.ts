@@ -52,8 +52,8 @@ export class DetalhesPerfilComponent implements OnInit {
 
 			this.filmes = [];
 		for (let index = 0; index < numeroIds; index++){
-			this.filmesService.getFilmeIdApi(idFilmes[index])
-				.then(filme => this.filmes[index] = filme);
+			this.filmesService.getFilme(idFilmes[index])
+				.subscribe(filme => this.filmes[index] = filme);
 		}
 	}
 

@@ -20,7 +20,7 @@ export const MOCKCONTA: Conta[] = [
 			{ 
 				id: 2,
 				nome: 'Arthur',
-				lsFilmesAssistir: [597]
+				lsFilmesAssistir: [2]
 			}
 		]
 	},

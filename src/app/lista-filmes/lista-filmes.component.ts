@@ -26,7 +26,7 @@ export class ListaFilmesComponent implements OnInit {
 	}
 
 	getFilme(id: number): void{
-		this.filmesService.getFilmeIdApi(id);
+		this.filmesService.getFilme(id);
 	}
 
 }

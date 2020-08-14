@@ -13,7 +13,7 @@ import { FILMES } from '../mock-data/mock-filmes'
 })
 export class FilmesService {
 	response: RespostaTmdb;
-	filmes: Filme[];
+	filmes: Filme[] = [];
 	aux: number;
 
 	constructor( private api: ApiConfigService) { }
@@ -38,16 +38,23 @@ export class FilmesService {
 		return of(FILMES.find(filme => filme.id === id));
 	}
 	
-	getFilmeApi(nome: string): Observable<Filme[]>{
-		this.api.searchByName(nome).subscribe((res) =>{
-			this.response = res as unknown as RespostaTmdb;
-			this.filmes = this.response.results;
-			console.log('A api retornou');
-			console.log(this.filmes);
-			return of(this.filmes);
+	async getFilmeApi(nome: string): Promise<Filme[]>{
+		await new Promise<Filme[]>( async resolve => {
+			await this.api.searchByName(nome).then(async (res) =>{
+				this.response = res;
+				this.filmes = this.response.results;
+				//console.log('A api retornou(FILME-SERVICE)');
+				//console.log(this.filmes);
+				resolve();
+			}, err => {
+				console.log(err);
+				resolve();
+			});
+			resolve();
 		});
-		console.log('FilmesService get da api FINAL');
-		return of(this.filmes);
+		//console.log('PROMESSA FEITA (FILME-SERVICE)');
+		//console.log(this.filmes);
+		return this.filmes;
 	}
 
 }

@@ -14,6 +14,12 @@
 
 </div>
 
-<div>
-	<app-lista-filmes [filmes]="filmes"></app-lista-filmes>
+<div *ngIf="filmes.length > 0">
+	<h1>Filmes encontrados</h1>
+	<ul class="filmes">
+		<li *ngFor="let filme of filmes">
+			<app-filme [filme]="filme"></app-filme>
+			<button (click)="addWatchLater()">Adicionar a lista</button>
+		</li>
+	</ul>
 </div>

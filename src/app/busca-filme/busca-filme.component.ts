@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 //Componentes necessarios
 import { Filme } from '../base-data-types/filme';
 //Componentes de servico
 import { FilmesService } from '../services/filmes.service';
-import { ContaService } from '../services/conta.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,9 +12,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./busca-filme.component.css']
 })
 export class BuscaFilmeComponent implements OnInit {
-	mySubscription: any;
+	displayedColumnsFilmes: string[] = ['id'];
 	nomeFilme: string;
-	resultados: string;
 	filmes: Filme[];
 
   constructor( 
@@ -23,27 +22,35 @@ export class BuscaFilmeComponent implements OnInit {
 		) { }
 
   ngOnInit(): void {
+		this.filmes = [];
 	}
 
 	getFilmes(): void{
-		this.filmesService.getFilmeApi(this.nomeFilme).subscribe(filmes => this.filmes = filmes);
+		//this.filmesService.getFilmeApi(this.nomeFilme).subscribe(filmes => this.filmes = filmes);
 	}
 
-	buscarFilmeNome(): void {
+	async buscarFilmeNome() {
 		if(this.nomeFilme === ''){
-			this.filmes = undefined;
-			return;
-		}
-		
-		this.filmesService.getFilmeApi(this.nomeFilme)
-			.subscribe((filmesRetornados) => {
+			this.filmes = [];
+		} else {
+			await this.filmesService.getFilmeApi(this.nomeFilme)
+			.then( async filmesRetornados => {
 					this.filmes = filmesRetornados;
+					//console.log('Lista retornada da filmeService (BUSCA-FILME): ');
+					//console.log(filmesRetornados);
 				}
 			);
+			//console.log('Lista usada(BUSCA-FILME): ');
+			//console.log(this.filmes);
+		}
 	}
 
 	goConta(){
 		this.router.navigate(['conta']);
+	}
+
+	addWatchLater(){
+		//TODO
 	}
 
 }

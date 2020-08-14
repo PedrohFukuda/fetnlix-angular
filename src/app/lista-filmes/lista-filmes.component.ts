@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 //Componentes necessarios
 import { Filme } from '../base-data-types/filme';
 //Componentes de serviço
@@ -6,6 +6,7 @@ import { FilmesService } from '../services/filmes.service';
 
 
 @Component({
+	changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-lista-filmes',
   templateUrl: './lista-filmes.component.html',
   styleUrls: ['./lista-filmes.component.css']

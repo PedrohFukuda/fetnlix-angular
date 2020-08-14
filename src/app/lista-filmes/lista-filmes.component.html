@@ -2,8 +2,7 @@
 	<h1>Lista de filmes</h1>
 	<ul class="filmes">
 		<li *ngFor="let filme of filmes">
-			<div>{{filme.original_title}}</div>
-			<div>{{filme.overview}}</div>
+			<app-filme [filme]="filme"></app-filme>
 		</li>
 	</ul>
 </div>

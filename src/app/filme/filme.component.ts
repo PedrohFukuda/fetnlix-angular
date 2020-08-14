@@ -14,6 +14,7 @@ export class FilmeComponent implements OnInit {
 
   constructor(private filmesService: FilmesService) { }
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+	}
 	
 }

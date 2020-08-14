@@ -1,10 +1,5 @@
 <div *ngIf="masterPerfil">
-	<h3>Detalhes do perfil {{this.masterPerfil.nome}}</h3>
-	<div>
-		<labe>nome:
-			<input [(ngModel)]="this.masterPerfil.perfilBase.nome" placeholder="nome"/>
-		</labe>
-	</div>
+	<h3>Detalhes da conta de {{this.masterPerfil.perfilBase.nome}}</h3>
 	<div>
 		<labe>email:
 			<input [(ngModel)]="this.masterPerfil.email" placeholder="email"/>
@@ -22,7 +17,6 @@
 	</div>
 	<button (click)="save()">Salvar</button>
 </div>
-
 <div>
-	<app-lista-filmes [filmes]="filmes"></app-lista-filmes>
+	<app-detalhes-perfil [perfil]="perfilB"></app-detalhes-perfil>
 </div>

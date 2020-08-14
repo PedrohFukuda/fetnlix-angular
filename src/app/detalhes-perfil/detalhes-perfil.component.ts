@@ -29,7 +29,8 @@ export class DetalhesPerfilComponent implements OnInit {
 	) { }
 
   ngOnInit(): void {
-		this.getPerfil();
+		if (this.perfil === undefined)
+			this.getPerfil();
 	}
 	
 	getPerfil(): void {

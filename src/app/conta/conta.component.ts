@@ -44,8 +44,4 @@ export class ContaComponent implements OnInit {
 		return this.conta.masterPerfil;
 	}
 
-	goBack(): void {
-		this.location.back();
-	}
-
 }

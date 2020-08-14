@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 //Componentes necessarios
+import { Filme } from '../base-data-types/filme';
+import { Perfil } from '../base-data-types/perfil-dt/perfil';
 import { MasterPerfil } from '../base-data-types/perfil-dt/master-perfil';
 //Componentes de serviço
 import { MasterPerfilService } from '../services/master-perfil.service';
-import { Filme } from '../base-data-types/filme';
 
 @Component({
   selector: 'app-master-perfil',
@@ -12,17 +13,18 @@ import { Filme } from '../base-data-types/filme';
 })
 export class MasterPerfilComponent implements OnInit {
 	@Input() masterPerfil: MasterPerfil;
+	perfilB: Perfil;
 	filmes: Filme[];
 
   constructor( private masterService: MasterPerfilService) {
 	 }
 
   ngOnInit(): void {
-		this.getPerfil(this.masterPerfil.id);
+		this.getPerfil();
 	}
 	
-	getPerfil(id: number): void{
-		this.masterService.getPerfil(id);
+	getPerfil(): void{
+		this.perfilB = this.masterPerfil.perfilBase;
 	}
 
 	save(): void {

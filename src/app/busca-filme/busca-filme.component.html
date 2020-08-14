@@ -1,0 +1,19 @@
+<div>
+	<div>
+		<button (click)="goConta()">Minha conta</button>
+	</div>
+	<div class="buscFilmes">
+		<input [(ngModel)]="nomeFilme" type="text" placeholder="Digite o nome do filme"/>
+		<div>
+		<span>A busca é feita usando o banco de dados da </span> <a href="https://www.themoviedb.org/">TMDb</a>
+		</div>
+	</div>
+	<div>
+		<button (click)="buscarFilmeNome()">Buscar</button>
+	</div>
+
+</div>
+
+<div>
+	<app-lista-filmes [filmes]="filmes"></app-lista-filmes>
+</div>

@@ -34,13 +34,26 @@ export class FilmesService {
 		return of(FILMES);
 	}
 
+	async getFilmeIdApi(id: number): Promise<Filme>{
+		await new Promise<Filme>( async resolve => {
+			await this.api.searchById(id).then( async res => {
+				this.filmes[0] = <Filme> res;
+				console.log('FILME BUCADO POR ID (FILME-SERVICE)');
+				console.log(this.filmes[0]);
+			});
+		});
+		return this.filmes[0];
+	}
+
+	//
 	getFilme(id: number): Observable<Filme>{
 		return of(FILMES.find(filme => filme.id === id));
 	}
+	//*/
 	
-	async getFilmeApi(nome: string): Promise<Filme[]>{
+	async getFilmesNomeApi(nome: string): Promise<Filme[]>{
 		await new Promise<Filme[]>( async resolve => {
-			await this.api.searchByName(nome).then(async (res) =>{
+			await this.api.searchByName(nome).then(async (res) => {
 				this.response = res;
 				this.filmes = this.response.results;
 				//console.log('A api retornou(FILME-SERVICE)');

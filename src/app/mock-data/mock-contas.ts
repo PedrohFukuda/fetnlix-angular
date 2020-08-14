@@ -1,11 +1,11 @@
 import { Conta } from '../base-data-types/conta';
-import { MASTER } from './mock-masterPerfilA'
+import { MASTERA } from './mock-masterPerfilA'
 
-export const CONTA: Conta[] = [
+export const MOCKCONTA: Conta[] = [
 	{ 
 		estaAutenticado: false,
 		id: 0, 
-		masterPerfil: MASTER[0], 
+		masterPerfil: MASTERA[0], 
 		perfis: [
 			{ 
 				id: 0,
@@ -20,14 +20,14 @@ export const CONTA: Conta[] = [
 			{ 
 				id: 2,
 				nome: 'Arthur',
-				lsFilmesAssistir: [2]
+				lsFilmesAssistir: [597]
 			}
 		]
 	},
 	{ 
 		estaAutenticado: false,
 		id: 1, 
-		masterPerfil: MASTER[1],
+		masterPerfil: MASTERA[1],
 		perfis: [
 			{ 
 				id: 0,

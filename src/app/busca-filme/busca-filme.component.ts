@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
 //Componentes necessarios
 import { Filme } from '../base-data-types/filme';
 //Componentes de servico
@@ -33,11 +32,11 @@ export class BuscaFilmeComponent implements OnInit {
 		if(this.nomeFilme === ''){
 			this.filmes = [];
 		} else {
-			await this.filmesService.getFilmeApi(this.nomeFilme)
+			await this.filmesService.getFilmesNomeApi(this.nomeFilme)
 			.then( async filmesRetornados => {
 					this.filmes = filmesRetornados;
-					//console.log('Lista retornada da filmeService (BUSCA-FILME): ');
-					//console.log(filmesRetornados);
+					console.log('Lista retornada da filmeService (BUSCA-FILME): ');
+					console.log(filmesRetornados);
 				}
 			);
 			//console.log('Lista usada(BUSCA-FILME): ');

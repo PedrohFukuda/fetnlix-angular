@@ -3,12 +3,13 @@ import { Observable, of } from 'rxjs';
 //Componentes necessarios
 import { MasterPerfil } from '../base-data-types/perfil-dt/master-perfil';
 //Componentes de banco de dados
-import { MASTER } from '../mock-data/mock-masterPerfilA'
+import { MASTERA } from '../mock-data/mock-masterPerfilA'
 
 @Injectable({
   providedIn: 'root'
 })
 export class MasterPerfilService {
+	MASTER: MasterPerfil[] = MASTERA;
 	currId: number = 2;
 
 	constructor() { }
@@ -16,7 +17,7 @@ export class MasterPerfilService {
 	//GETS
 
 	getPerfil(id: number): Observable<MasterPerfil> {
-		return of(MASTER.find(masterPerfil => masterPerfil.id === id));
+		return of(this.MASTER.find(masterPerfil => masterPerfil.id === id));
 	}
 
 	//ADDS
@@ -30,7 +31,7 @@ export class MasterPerfilService {
 			perfilBase: { id: 1, nome: "Perfil principal", lsFilmesAssistir: []},
 			idConta: contaId
 		};
-		MASTER.push(master);
+		this.MASTER.push(master);
 
 		this.currId++;
 		return master;

@@ -1,6 +1,6 @@
 import { MasterPerfil } from '../base-data-types/perfil-dt/master-perfil';
 
-export const MASTER: MasterPerfil[] = [
+export const MASTERA: MasterPerfil[] = [
 	{
 		id: 0,
 		email: 'AA@A',

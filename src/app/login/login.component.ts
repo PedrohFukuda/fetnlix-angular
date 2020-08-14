@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
 	}
 
 	registrar(): void {
-		this.contaService.create(this.emailTxt, this.senhaTxt).subscribe(conta => this.conta = conta);
-		this.router.navigate(['/conta/'.concat((this.conta.id).toString())]);
+		this.contaService.create(this.emailTxt, this.senhaTxt);
+		this.router.navigate(['/conta/']);
 	}
 
 }
